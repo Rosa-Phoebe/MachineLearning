@@ -28,7 +28,7 @@ import jax.numpy as jnp
 import numpy as np
 
 # Special transform functions
-from jax import grad, jit, vmap, pmap
+from jax import grad, jit, vmap
 
 # JAX's low level API
 # lax is just an anagram for XLA.
@@ -260,39 +260,3 @@ norm(X).block_until_ready() # Add time module
 norm_compiled(X).block_until_ready() # Add time module
 
 # Add more content for JIT
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
