@@ -201,7 +201,7 @@ train_images = jnp.array(train_dataset.data) # (60000, 28, 28)
 train_lbls = jnp.array(train_dataset.targets) # (60000,)
 # Need to convert shape (10000, 28, 28) -> (10000, 28, 28, 1) for test data
 # We don't have to do this for train data because `custom_transform` does it for us
-test_images = np.expand_dims(jnp.array(test_dataset.data), axis=3) # (10000, 28, 28, 1)
+test_images = jnp.array(np.expand_dims(test_dataset.data, axis=3)) # (10000, 28, 28, 1)
 test_lbls = jnp.array(test_dataset.targets) # (10000,)
     
 # Visualize a single mnist image
